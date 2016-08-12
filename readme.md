@@ -1,7 +1,7 @@
 # JLXH PHP Framework
 
 [![Build Status](https://travis-ci.org/jlxh/laravel.svg)](https://travis-ci.org/jlxh/laravel)
-[![StyleCI](https://styleci.io/repos/64642027/shield?style=flat)](https://styleci.io/repos/64642027)
+[![StyleCI](https://styleci.io/repos/64994739/shield?style=flat)](https://styleci.io/repos/64994739)
 [![Total Downloads](https://poser.pugx.org/jlxh/laravel/d/total.svg)](https://packagist.org/packages/jlxh/laravel)
 [![Latest Stable Version](https://poser.pugx.org/jlxh/laravel/v/stable.svg)](https://packagist.org/packages/jlxh/laravel)
 [![Latest Unstable Version](https://poser.pugx.org/jlxh/laravel/v/unstable.svg)](https://packagist.org/packages/jlxh/laravel)
