@@ -35,12 +35,12 @@ class MakeRoute extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . '/stubs/route.stub';
+        return __DIR__.'/stubs/route.stub';
     }
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Http\Routes';
+        return $rootNamespace.'\Http\Routes';
     }
 
     protected function replaceNamespace(&$stub, $name)
