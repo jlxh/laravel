@@ -1,4 +1,4 @@
-<body class="skin-blue sidebar-mini">
+<body class="skin-blue sidebar-mini fixed">
     <div class="wrapper">
         <!-- Top navigation -->
         @include('admin.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
