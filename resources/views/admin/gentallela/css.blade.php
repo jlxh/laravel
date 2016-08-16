@@ -1,0 +1,1 @@
+<link href="{{ asset('admin-assets/gentallela/css/custom.min.css') }}" rel="stylesheet">
