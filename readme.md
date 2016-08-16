@@ -13,12 +13,16 @@ JLXH PHP Framework is based on Laravel which is a web application framework with
 
 In order to install JLXH PHP Framework, just clone
 
-    git clone https://github.com/jlxh/laravel.git
+    $git clone https://github.com/jlxh/laravel.git
 
 or you can run the `composer require` command from your terminal:
 
-    composer require jlxh/laravel
+    $composer require jlxh/laravel
 
+install dependency assets packages:
+    
+    $cd public
+    $npm install
 
 ## Configuration
 
