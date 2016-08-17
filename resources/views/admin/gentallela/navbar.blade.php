@@ -17,11 +17,11 @@
                                 </a>
                                 <ul class="nav child_menu">
                                     @foreach($link['links'] as $subLink)
-                                        <li><a href="{{ $subLink['links'] }}">{{ $subLink['name'] }}</a></li>
+                                        <li><a href="{{ $subLink['links'] }}" {{ $subLink['pjax'] or '' }}>{{ $subLink['name'] }}</a></li>
                                     @endforeach
                                 </ul>
                             @else
-                                <a href="{{ $link['links'] }}">
+                                <a href="{{ $link['links'] }}" {{ $link['pjax'] or '' }}>
                                     {!! isset($link['icon']) ? '<i class="fa '.$link['icon'].'"></i>' : '' !!}
                                     {{ $link['name'] }}
                                 </a>

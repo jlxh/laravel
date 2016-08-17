@@ -23,14 +23,14 @@
 @include('admin.'.session('adminTemplate').'.body', [
                 'navlinks' => [
                     // 首页
-                    ['name' => '首页', 'links' => url('admin'), 'icon' => 'fa-home'],
+                    ['name' => '首页', 'links' => url('admin'), 'icon' => 'fa-home', 'pjax' => 'pjax-data'],
 
                     // 样例
                     [
                         'name' => '导航菜单',
                         'links' => [
-                            ['name' => '子菜单1', 'links' => url('admin/example/1')],
-                            ['name' => '子菜单2', 'links' => url('admin/example/2')]
+                            ['name' => '子菜单1', 'links' => url('admin/example/1'), 'pjax' => 'pjax-data'],
+                            ['name' => '子菜单2', 'links' => url('admin/example/2'), 'pjax' => 'pjax-data']
                         ],
                         'icon' => 'fa-key'
                     ]

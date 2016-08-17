@@ -12,11 +12,11 @@
                                data-toggle="dropdown">{{ $link['name'] }}</a>
                             <ul class="dropdown-menu">
                                 @foreach($link['links'] as $subLink)
-                                    <li><a href="{{ url($subLink['links']) }}">{{ $subLink['name'] }}</a></li>
+                                    <li><a href="{{ url($subLink['links']) }}" {{ $subLink['pjax'] or '' }}>{{ $subLink['name'] }}</a></li>
                                 @endforeach
                             </ul>
                         @else
-                            <a href="{{ $link['links'] }}">{{ $link['name'] }}</a>
+                            <a href="{{ $link['links'] }}" {{ $link['pjax'] or '' }}>{{ $link['name'] }}</a>
                         @endif
                     </li>
                 @endforeach
