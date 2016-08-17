@@ -1,1 +1,0 @@
-<script type="text/javascript" src="{{ asset('admin-assets/gentallela/js/custom.min.js') }}"></script>

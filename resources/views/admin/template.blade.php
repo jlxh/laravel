@@ -13,11 +13,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('node_modules/font-awesome/css/font-awesome.min.css') }}">
     <!-- Data tables -->
-{{--    <link rel="stylesheet" href="{{ asset('node_modules/datatables/media/css/dataTables.bootstrap.min.css') }}"/>--}}
+    <link rel="stylesheet" href="{{ asset('node_modules/datatables/media/css/dataTables.bootstrap.min.css') }}"/>
     <!-- Theme style -->
     @include('admin.'.session('adminTemplate').'.css')
     <link rel="stylesheet" href="{{ asset('admin-assets/custom/custom.css') }}"/>
-    @yield('nestedStyle')
+    @yield('css')
 </head>
 
 <!-- template body -->

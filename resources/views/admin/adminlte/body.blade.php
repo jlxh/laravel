@@ -21,7 +21,7 @@
     <script type="text/javascript" src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
     <!-- theme script -->
-    @include('admin.adminlte.script')
+    <script type="text/javascript" src="{{ asset('admin-assets/adminlte/js/app.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('admin-assets/custom/custom.js') }}"></script>
-    @yield('nestedScript')
+    @yield('script')
 </body>

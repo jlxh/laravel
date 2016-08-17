@@ -7,9 +7,10 @@
             <!-- Top navigation -->
             @include('admin.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
 
-            <!-- Page content -->
             <div class="right_col" role="main">
                 @include('admin.components.alert')
+
+                <!-- Page content -->
                 @yield('content')
             </div>
         </div>
@@ -20,7 +21,7 @@
     <script type="text/javascript" src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
     <!-- theme script -->
-    @include('admin.gentallela.script')
+    <script type="text/javascript" src="{{ asset('admin-assets/gentallela/js/custom.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('admin-assets/custom/custom.js') }}"></script>
-    @yield('nestedScript')
+    @yield('script')
 </body>

@@ -1,1 +1,0 @@
-<script type="text/javascript" src="{{ asset('admin-assets/adminlte/js/app.min.js') }}"></script>
