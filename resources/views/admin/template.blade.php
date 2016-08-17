@@ -13,7 +13,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('node_modules/font-awesome/css/font-awesome.min.css') }}">
     <!-- Data tables -->
-    <link rel="stylesheet" href="{{ asset('node_modules/datatables/media/css/dataTables.bootstrap.min.css') }}"/>
     <!-- Theme style -->
     @include('admin.'.session('adminTemplate').'.css')
     <link rel="stylesheet" href="{{ asset('admin-assets/custom/custom.css') }}"/>
@@ -30,8 +29,8 @@
                     [
                         'name' => '导航菜单',
                         'links' => [
-                            ['name' => '子菜单1', 'links' => url('example/1')],
-                            ['name' => '子菜单2', 'links' => url('example/2')]
+                            ['name' => '子菜单1', 'links' => url('admin/example/1')],
+                            ['name' => '子菜单2', 'links' => url('admin/example/2')]
                         ],
                         'icon' => 'fa-key'
                     ]

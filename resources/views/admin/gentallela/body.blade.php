@@ -7,9 +7,7 @@
             <!-- Top navigation -->
             @include('admin.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
 
-            <div class="right_col" role="main">
-                @include('admin.components.alert')
-
+            <div class="right_col" role="main" id="pjax-container">
                 <!-- Page content -->
                 @yield('content')
             </div>
@@ -19,6 +17,7 @@
     <!-- basic script -->
     <script type="text/javascript" src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('node_modules/jquery-pjax/jquery.pjax.js') }}"></script>
 
     <!-- theme script -->
     <script type="text/javascript" src="{{ asset('admin-assets/gentallela/js/custom.min.js') }}"></script>

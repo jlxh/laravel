@@ -1,6 +1,6 @@
 <aside class="main-sidebar">
     <section class="sidebar">
-        <ul class="sidebar-menu">
+        <ul class="sidebar-menu" id="nav-tree">
             @foreach($navlinks as $link)
                 @if(is_array($link['links']))
                     <li class="treeview">

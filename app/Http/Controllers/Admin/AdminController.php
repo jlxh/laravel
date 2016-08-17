@@ -1,19 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
     /**
+     * @param int $id
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index($id = 0)
     {
         if (! session()->has('adminTemplate')) {
             session(['adminTemplate' => 'gentallela']);
         }
 
-        return view('admin.index');
+        return view('admin.index', ['id' => $id]);
     }
 
     /**

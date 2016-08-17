@@ -7,9 +7,7 @@
         @include('admin.'.session('adminTemplate').'.navbar', ['links' => $navlinks])
 
         <div class="content-wrapper">
-            <section class="content">
-                @include('admin.components.alert')
-
+            <section class="content" id="pjax-container">
                 <!-- Page content -->
                 @yield('content')
             </section>
@@ -19,6 +17,7 @@
     <!-- basic script -->
     <script type="text/javascript" src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('node_modules/jquery-pjax/jquery.pjax.js') }}"></script>
 
     <!-- theme script -->
     <script type="text/javascript" src="{{ asset('admin-assets/adminlte/js/app.min.js') }}"></script>

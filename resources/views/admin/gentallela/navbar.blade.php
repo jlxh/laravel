@@ -6,7 +6,7 @@
         <div class="clearfix"></div>
         <div id="sidebar-menu" class="main_menu_side main_menu hidden-print">
             <div class="menu-section">
-                <ul class="nav side-menu">
+                <ul class="nav side-menu" id="nav-tree">
                     @foreach($navlinks as $link)
                         <li>
                             @if(is_array($link['links']))
