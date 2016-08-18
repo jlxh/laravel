@@ -16,7 +16,7 @@ class UserTableSeeder extends Seeder
             'name' => 'admin',
             'password' => bcrypt('123456'),
             'email' => 'admin@jlxh.com',
-            'phone' => '18888888888'
+            'phone' => '18888888888',
         ]);
     }
 }
