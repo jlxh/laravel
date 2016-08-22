@@ -12,15 +12,14 @@
     <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('node_modules/font-awesome/css/font-awesome.min.css') }}">
-    <!-- Data tables -->
     <!-- Theme style -->
-    @include('admin.'.session('adminTemplate').'.css')
+    @include('admin.templates.'.session('adminTemplate').'.css')
     <link rel="stylesheet" href="{{ asset('admin-assets/custom/custom.css') }}"/>
     @yield('css')
 </head>
 
 <!-- template body -->
-@include('admin.'.session('adminTemplate').'.body', [
+@include('admin.templates.'.session('adminTemplate').'.body', [
                 'navlinks' => [
                     // 首页
                     ['name' => '首页', 'links' => url('admin'), 'icon' => 'fa-home', 'pjax' => 'pjax-data'],

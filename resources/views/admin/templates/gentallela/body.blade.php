@@ -1,16 +1,16 @@
-<body class="skin-blue sidebar-mini fixed">
-    <div class="wrapper">
-        <!-- Top navigation -->
-        @include('admin.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <!-- Sidebar menu -->
+            @include('admin.templates.'.session('adminTemplate').'.navbar', ['links' => $navlinks])
 
-        <!-- Sidebar menu -->
-        @include('admin.'.session('adminTemplate').'.navbar', ['links' => $navlinks])
+            <!-- Top navigation -->
+            @include('admin.templates.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
 
-        <div class="content-wrapper">
-            <section class="content" id="pjax-container">
+            <div class="right_col" role="main" id="pjax-container">
                 <!-- Page content -->
                 @yield('content')
-            </section>
+            </div>
         </div>
     </div>
 
@@ -20,7 +20,7 @@
     <script type="text/javascript" src="{{ asset('node_modules/jquery-pjax/jquery.pjax.js') }}"></script>
 
     <!-- theme script -->
-    <script type="text/javascript" src="{{ asset('admin-assets/adminlte/js/app.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin-assets/gentallela/js/custom.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('admin-assets/custom/custom.js') }}"></script>
     @yield('script')
 </body>
