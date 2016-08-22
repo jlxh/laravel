@@ -9,15 +9,9 @@
 
     <title>管理员登陆</title>
 
-    <!-- Bootstrap -->
-{!! Html::style('node_modules/bootstrap/dist/css/bootstrap.min.css') !!}
-<!-- Font Awesome -->
-{!! Html::style('node_modules/font-awesome/css/font-awesome.min.css') !!}
-<!-- Animate.css -->
-{{--<link href="https://colorlib.com/polygon/gentelella/css/animate.min.css" rel="stylesheet">--}}
-
-<!-- Custom Theme Style -->
-    {!! Html::style('admin-assets/gentallela/css/custom.min.css') !!}
+    <link rel="stylesheet" href="{{ elixir('css/lib.css') }}">
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" href="{{ asset('admin-assets/gentallela/css/custom.min.css') }}">
 </head>
 
 <body class="login">
