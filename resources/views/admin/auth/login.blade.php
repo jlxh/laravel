@@ -9,9 +9,9 @@
 
     <title>管理员登陆</title>
 
-    <link rel="stylesheet" href="{{ elixir('css/lib.css') }}">
+    {!! Html::style(asset(elixir('css/lib.css'))) !!}
     <!-- Custom Theme Style -->
-    <link rel="stylesheet" href="{{ asset('admin-assets/gentallela/css/custom.min.css') }}">
+    {!! Html::style(asset('admin-assets/gentallela/css/custom.min.css')) !!}
 </head>
 
 <body class="login">

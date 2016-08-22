@@ -15,9 +15,9 @@
     </div>
 
     <!-- basic script -->
-    <script type="text/javascript" src="{{ elixir('js/lib.js') }}"></script>
+    {!! Html::script(asset(elixir('js/lib.js'))) !!}
     <!-- theme script -->
-    <script type="text/javascript" src="{{ asset('admin-assets/gentallela/js/custom.min.js') }}"></script>
-    <script type="text/javascript" src="{{ elixir('js/admin.js') }}"></script>
+    {!! Html::script(asset('admin-assets/gentallela/js/custom.min.js')) !!}
+    {!! Html::script(asset(elixir('js/admin.js'))) !!}
     @yield('script')
 </body>

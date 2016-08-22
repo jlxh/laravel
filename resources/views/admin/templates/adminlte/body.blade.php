@@ -15,10 +15,10 @@
     </div>
 
     <!-- basic script -->
-    <script type="text/javascript" src="{{ elixir('js/lib.js') }}"></script>
+    {!! Html::script(asset(elixir('js/lib.js'))) !!}
     <!-- theme script -->
-    <script type="text/javascript" src="{{ asset('admin-assets/adminlte/js/app.min.js') }}"></script>
-    <script type="text/javascript" src="{{ elixir('js/admin.js') }}"></script>
+    {!! Html::script(asset('admin-assets/adminlte/js/app.min.js')) !!}
+    {!! Html::script(asset(elixir('js/admin.js'))) !!}
     
     @yield('script')
 </body>

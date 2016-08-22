@@ -8,10 +8,10 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>后台管理</title>
 
-    <link rel="stylesheet" href="{{ elixir('css/lib.css') }}">
+    {!! Html::style(asset(elixir('css/lib.css'))) !!}
     <!-- Theme style -->
     @include('admin.templates.'.session('adminTemplate').'.css')
-    <link rel="stylesheet" href="{{ elixir('css/admin.css') }}">
+    {!! Html::style(asset(elixir('css/admin.css'))) !!}
     @yield('css')
 </head>
 
