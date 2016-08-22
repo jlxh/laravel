@@ -23,7 +23,6 @@
 <body class="login">
 <div>
     <a class="hiddenanchor" id="signin"></a>
-    {{--{!! dd($errors) !!}--}}
     <div class="login_wrapper">
         <div class="animate form login_form">
             <section class="login_content">
@@ -35,6 +34,12 @@
                 <div>
                     <input type="password" class="form-control" placeholder="密码" required="" name="password"/>
                 </div>
+                <div class="checkbox" style="text-align: left">
+                    <label>
+                        <input type="checkbox" name="remember"/>
+                        remember me
+                    </label>
+                </div>
                 <div>
                     <button class="btn btn-default submit" type="submit">登陆</button>
                     <a class="reset_pass" href="#">Lost your password?</a>
@@ -44,7 +49,7 @@
 
                 <div class="separator">
                     <div class="clearfix"></div>
-                    <br />
+                    <br/>
                 </div>
                 {!! Form::close() !!}
             </section>
