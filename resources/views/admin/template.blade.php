@@ -8,13 +8,10 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>后台管理</title>
 
-    <!-- basic style -->
-    <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('node_modules/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ elixir('css/lib.css') }}">
     <!-- Theme style -->
     @include('admin.templates.'.session('adminTemplate').'.css')
-    <link rel="stylesheet" href="{{ asset('admin-assets/custom/custom.css') }}"/>
+    <link rel="stylesheet" href="{{ elixir('css/admin.css') }}">
     @yield('css')
 </head>
 

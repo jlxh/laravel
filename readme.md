@@ -13,16 +13,23 @@ JLXH PHP Framework is based on Laravel which is a web application framework with
 
 In order to install JLXH PHP Framework, just clone
 
-    $git clone https://github.com/jlxh/laravel.git
+    $ git clone https://github.com/jlxh/laravel.git
 
 or you can run the `composer require` command from your terminal:
 
-    $composer require jlxh/laravel
+    $ composer require jlxh/laravel
 
-install dependency assets packages:
-    
-    $cd public
-    $npm install
+This framework use [laravel-elixir](https://laravel.com/docs/elixir) to manager assets, which is based on [gulp](http://gulpjs.com/).
+
+so, you should install gulp and other denpendencies first:
+
+    $ npm install
+
+then, gulp the assets:
+
+    $ gulp
+
+The `gulp` command will auto compile assets(npm packages, custom js and css) into `public/` folder.
 
 ## Configuration
 

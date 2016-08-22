@@ -15,12 +15,9 @@
     </div>
 
     <!-- basic script -->
-    <script type="text/javascript" src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('node_modules/jquery-pjax/jquery.pjax.js') }}"></script>
-
+    <script type="text/javascript" src="{{ elixir('js/lib.js') }}"></script>
     <!-- theme script -->
     <script type="text/javascript" src="{{ asset('admin-assets/gentallela/js/custom.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('admin-assets/custom/custom.js') }}"></script>
+    <script type="text/javascript" src="{{ elixir('js/admin.js') }}"></script>
     @yield('script')
 </body>
