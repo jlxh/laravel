@@ -4,7 +4,7 @@
     "gulp": "^3.8.8"
   },
   "dependencies": {
-    "laravel-elixir": "^4.0.0",
+    "laravel-elixir": "*",
     "bootstrap": "^3.0.0",
     "jquery": "2.1.4",
     "font-awesome": "^4.0.0",
