@@ -19,20 +19,23 @@ or you can run the `composer require` command from your terminal:
 
     $ composer require jlxh/laravel
 
-This framework use [laravel-elixir](https://laravel.com/docs/elixir) to manager assets, which is based on [gulp](http://gulpjs.com/).
+This framework use [laravel-mix](https://github.com/JeffreyWay/laravel-mix) to manager assets, which is based on [webpack](https://webpack.github.io/).
 
-so, you should install gulp and other denpendencies first:
+Install dependencies:
 
     $ npm install
 
-then, gulp the assets:
+develepment:
 
-    $ gulp
+    $ npm run dev
 
-The `gulp` command will auto compile assets(npm packages, custom js and css) into `public/` folder.
+open hot modules replacement:
+	
+	$ npm run hmr
 
-## Configuration
+for production:
 
+	$ npm run production
 
 ### Contributing
 
