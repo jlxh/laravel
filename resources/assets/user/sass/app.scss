@@ -1,1 +1,8 @@
+// Normalize styles cross browsers.
+@import "node_modules/normalize.css/normalize";
+
+// Pre-defined sass variables.
 @import "variable";
+
+// Global styles
+@import "global";

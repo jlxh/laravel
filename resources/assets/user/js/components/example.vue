@@ -1,7 +1,7 @@
 <template>
 	<div class="example">
-		<p>{{ message }}</p>
-		<p>You've init a new Project with jlxh-laravel framework.</p>
+		<h1>{{ message }}</h1>
+		<p>You've initialized a new project with jlxh-laravel framework.</p>
 	</div>
 </template>
 
@@ -21,5 +21,6 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		height: 100%;
 	}
 </style>

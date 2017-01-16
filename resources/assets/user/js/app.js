@@ -1,5 +1,8 @@
-require './bootstrap';
+require('./bootstrap');
+
+import Example from './components/example.vue';
 
 new Vue({
-	el: '#app'
+	el: '#app',
+	components: { Example }
 });
