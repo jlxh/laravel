@@ -1,5 +1,5 @@
 let mix = require('laravel-mix').mix;
-
+mix.disableNotifications();
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,7 +11,7 @@ let mix = require('laravel-mix').mix;
  |
  */
 
-mix.js('resources/assets/user/js/app.js', 'public/user/js')
-    .sass('resources/assets/user/sass/app.scss', 'public/user/css');
-mix.sourceMaps(); // Enable sourcemaps
+mix.js('resources/assets/user/js/app.js', 'public/js')
+    .sass('resources/assets/user/sass/app.scss', 'public/css');
+mix.sourceMaps();
 // mix.version();

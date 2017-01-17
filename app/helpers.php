@@ -1,18 +1,18 @@
 <?php
 /*
- |-------------------------------------------------------------------------
- | Global helpers functions
- |-------------------------------------------------------------------------
+|-------------------------------------------------------------------------
+| Global helpers functions
+|-------------------------------------------------------------------------
  */
 
-if (! function_exists('example')) {
+if (!function_exists('example')) {
     function example()
     {
         // code
     }
 }
 
-if (! function_exists('mix')) {
+if (!function_exists('mix')) {
     /**
      * Get the path to a versioned mix file.
      *
@@ -21,18 +21,38 @@ if (! function_exists('mix')) {
      *
      * @throws \InvalidArgumentException
      */
-    function mix($file)
+    // mix('css/app.css')
+    // mix('js/app.js')
+    function mix($path, $json = false, $shouldHotReload = false)
     {
-        static $manifest = null;
-
-        if (is_null($manifest)) {
-            $manifest = json_decode(file_get_contents(public_path('manifest.json')), true);
+        if (!$json) {
+            static $json;
         }
 
-        if (isset($manifest[$file])) {
-            return url(str_replace("\\", "/", $manifest[$file]));
+        if (!$shouldHotReload) {
+            static $shouldHotReload;
         }
 
-        throw new InvalidArgumentException("File {$file} not defined in asset manifest.");
+        if (!$json) {
+            $manifestPath    = public_path('manifest.json');
+            $shouldHotReload = file_exists(public_path('hot'));
+            if (!file_exists($manifestPath)) {
+                throw new Exception(
+                    'The Laravel Mix manifest file does not exist. ' .
+                    'Please run "npm run webpack" and try again.'
+                );
+            }
+            $json = json_decode(file_get_contents($manifestPath), true);
+        }
+        $path = pathinfo($path, PATHINFO_BASENAME);
+        if (!array_key_exists($path, $json)) {
+            throw new Exception(
+                'Unknown file path. Please check your requested ' .
+                'webpack.mix.js output path, and try again.'
+            );
+        }
+        return $shouldHotReload
+        ? "http://localhost:8080{$json[$path]}"
+        : url($json[$path]);
     }
 }
