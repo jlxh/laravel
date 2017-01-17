@@ -28,9 +28,9 @@ class Role extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function users()
+    public function admins()
     {
-        return $this->belongsToMany('App\Models\User', 'user_roles');
+        return $this->belongsToMany('App\Models\Admin', 'user_roles');
     }
 
     /**
