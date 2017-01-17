@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Auth;
+namespace App\Http\Controllers\Dashboard\Auth;
 
 use App\Http\Controllers\Controller;
 use App\User;
@@ -25,11 +25,11 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    public $loginPath = '/admin/login';
+    public $loginPath = '/dashboard/login';
 
-    public $redirectAfterLogout = '/admin/login';
+    public $redirectAfterLogout = '/dashboard/login';
 
-    public $redirectTo = '/admin';
+    public $redirectTo = '/dashboard';
 
     /**
      * Create a new authentication controller instance.
@@ -62,7 +62,7 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Admin::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
@@ -71,7 +71,7 @@ class AuthController extends Controller
 
     public function getLogin()
     {
-        return view('admin.auth.login');
+        return view('dashboard.auth.login');
     }
 
     /**
@@ -117,6 +117,6 @@ class AuthController extends Controller
 
     public function getRegister()
     {
-        return view('admin.auth.login');
+        return view('dashboard.auth.login');
     }
 }

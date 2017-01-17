@@ -7,26 +7,24 @@
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>后台管理</title>
-
-    {!! Html::style(asset(elixir('css/lib.css'))) !!}
     <!-- Theme style -->
-    @include('admin.templates.'.session('adminTemplate').'.css')
-    {!! Html::style(asset(elixir('css/admin.css'))) !!}
+    <link rel="stylesheet" href="{{ mix('css/dashboard.css') }}">
+    @include('dashboard.templates.'.session('adminTemplate').'.css')
     @yield('css')
 </head>
 
 <!-- template body -->
-@include('admin.templates.'.session('adminTemplate').'.body', [
+@include('dashboard.templates.'.session('adminTemplate').'.body', [
                 'navlinks' => [
                     // 首页
-                    ['name' => '首页', 'links' => url('admin'), 'icon' => 'fa-home', 'pjax' => 'pjax-data'],
+                    ['name' => '首页', 'links' => url('dashboard'), 'icon' => 'fa-home', 'pjax' => 'pjax-data'],
 
                     // 样例
                     [
                         'name' => '导航菜单',
                         'links' => [
-                            ['name' => '子菜单1', 'links' => url('admin/example/1'), 'pjax' => 'pjax-data'],
-                            ['name' => '子菜单2', 'links' => url('admin/example/2'), 'pjax' => 'pjax-data']
+                            ['name' => '子菜单1', 'links' => url('dashboard/example/1'), 'pjax' => 'pjax-data'],
+                            ['name' => '子菜单2', 'links' => url('dashboard/example/2'), 'pjax' => 'pjax-data']
                         ],
                         'icon' => 'fa-key'
                     ]
@@ -37,13 +35,13 @@
                     [
                         'name' => '选择模板',
                         'links' => [
-                            ['name' => 'Gentenllela', 'links' => url('admin/template/gentallela')],
-                            ['name' => 'AdminLTE', 'links' => url('admin/template/adminlte')]
+                            ['name' => 'Gentenllela', 'links' => url('dashboard/template/gentallela')],
+                            ['name' => 'AdminLTE', 'links' => url('dashboard/template/adminlte')]
                         ]
                     ],
 
                     // 退出
-                    ['name' => 'logout', 'links' => url('admin/logout')]
+                    ['name' => 'logout', 'links' => url('dashboard/logout')]
                 ]
             ]
         )

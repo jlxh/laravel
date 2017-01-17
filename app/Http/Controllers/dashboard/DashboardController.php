@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 
-class AdminController extends Controller
+class DashboardController extends Controller
 {
     /**
      * @param int $id
@@ -16,7 +16,7 @@ class AdminController extends Controller
             session(['adminTemplate' => 'gentallela']);
         }
 
-        return view('admin.index', ['id' => $id]);
+        return view('dashboard.index', ['id' => $id]);
     }
 
     /**

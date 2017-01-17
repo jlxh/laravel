@@ -12,6 +12,10 @@ mix.disableNotifications();
  */
 
 mix.js('resources/assets/user/js/app.js', 'public/js')
-    .sass('resources/assets/user/sass/app.scss', 'public/css');
+	.sass('resources/assets/user/sass/app.scss', 'public/css');
+
+mix.js('resources/assets/dashboard/js/dashboard.js', 'public/js')
+	.sass('resources/assets/dashboard/sass/dashboard.scss', 'public/css');
+
 mix.sourceMaps();
-// mix.version();
+mix.version();

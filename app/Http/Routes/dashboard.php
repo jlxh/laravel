@@ -2,11 +2,11 @@
 
 /*
 |--------------------------------------------------------------------------
-| Admin Routes
+| Dashboard Routes
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard'], function () {
     // login and register
     Route::group(['namespace' => 'Auth'], function () {
         Route::get('/login', 'AuthController@getLogin');
@@ -15,11 +15,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::post('/register', 'AuthController@postRegister');
     });
 
-    Route::group(['middleware' => ['auth', 'pjax']], function () {
+    Route::group(['middleware' => ['auth']], function () {
         Route::get('/logout', 'Auth\AuthController@getLogout');
-        Route::get('/', 'AdminController@index');
-        Route::get('/template/{version}', 'AdminController@selectTemplate');
-        Route::get('/example/{id}', 'AdminController@index');
-        Route::get('/example/{id}', 'AdminController@index');
+        Route::get('/', 'DashboardController@index');
+        Route::get('/template/{version}', 'DashboardController@selectTemplate');
+        Route::get('/example/{id}', 'DashboardController@index');
     });
 });
