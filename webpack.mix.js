@@ -1,4 +1,4 @@
-let mix = require('laravel-mix').mix;
+let mix = require('@forehalo/laravel-mix').mix;
 mix.disableNotifications();
 /*
  |--------------------------------------------------------------------------

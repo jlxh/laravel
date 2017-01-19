@@ -3,4 +3,8 @@
 
 .example {
 	display: block;
+	.children {
+		margin: 10px;
+		background-color: grey;
+	}
 }
