@@ -17,14 +17,14 @@
 @include('dashboard.templates.'.session('adminTemplate').'.body', [
                 'navlinks' => [
                     // 首页
-                    ['name' => '首页', 'links' => url('dashboard'), 'icon' => 'fa-home', 'pjax' => 'pjax-data'],
+                    ['name' => '首页', 'links' => url('dashboard'), 'icon' => 'fa-home'],
 
                     // 样例
                     [
                         'name' => '导航菜单',
                         'links' => [
-                            ['name' => '子菜单1', 'links' => url('dashboard/example/1'), 'pjax' => 'pjax-data'],
-                            ['name' => '子菜单2', 'links' => url('dashboard/example/2'), 'pjax' => 'pjax-data']
+                            ['name' => '子菜单1', 'links' => url('dashboard/example/1')],
+                            ['name' => '子菜单2', 'links' => url('dashboard/example/2')]
                         ],
                         'icon' => 'fa-key'
                     ]

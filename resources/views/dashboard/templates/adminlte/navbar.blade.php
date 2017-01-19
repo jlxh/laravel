@@ -13,14 +13,14 @@
                         </a>
                         <ul class="treeview-menu">
                             @foreach($link['links'] as $subLink)
-                                <li><a href="{{ $subLink['links'] }}" {{ $subLink['pjax'] or '' }}>{{ $subLink['name'] }}</a></li>
+                                <li><a href="{{ $subLink['links'] }}">{{ $subLink['name'] }}</a></li>
                             @endforeach
                         </ul>
                     </li>
 
                 @else
                     <li>
-                        <a href="{{ $link['links'] }}" {{ $link['pjax'] or '' }}>
+                        <a href="{{ $link['links'] }}">
                             {!! isset($link['icon']) ? '<i class="fa '.$link['icon'].'"></i>' : '' !!}
                             <span>{{ $link['name'] }}</span>
                         </a>

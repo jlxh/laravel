@@ -7,7 +7,7 @@
         @include('dashboard.templates.'.session('adminTemplate').'.navbar', ['links' => $navlinks])
 
         <div class="content-wrapper">
-            <section class="content" id="pjax-container">
+            <section class="content">
                 <!-- Page content -->
                 @yield('content')
             </section>

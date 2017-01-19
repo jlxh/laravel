@@ -7,7 +7,7 @@
             <!-- Top navigation -->
             @include('dashboard.templates.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
 
-            <div class="right_col" role="main" id="pjax-container">
+            <div class="right_col" role="main">
                 <!-- Page content -->
                 @yield('content')
             </div>
