@@ -37,7 +37,7 @@ class Admin extends Model implements
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = ['password', 'remember_token', 'deleted_at'];
 
     public function roles()
     {

@@ -18,6 +18,14 @@
                 'navlinks' => [
                     // 首页
                     ['name' => '首页', 'links' => url('dashboard'), 'icon' => 'fa-home'],
+                    [
+                        'name' => '权限管理', 'icon' => 'fa-lock',
+                        'links' => [
+                            ['name' => '管理员管理', 'links' => url('dashboard/admins')],
+                            ['name' => '角色管理', 'links' => url('dashboard/roles')],
+                            ['name' => '权限管理', 'links' => url('dashboard/permissions')],
+                        ]
+                    ],
 
                     // 样例
                     [

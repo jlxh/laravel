@@ -20,5 +20,10 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard'], function () 
         Route::get('/', 'DashboardController@index');
         Route::get('/template/{version}', 'DashboardController@selectTemplate');
         Route::get('/example/{id}', 'DashboardController@index');
+
+        // Admins management
+        Route::resource('admins', 'AdminController');
+        Route::resource('permissions', 'PermissionController');
+        Route::resource('roles', 'RoleController');
     });
 });
