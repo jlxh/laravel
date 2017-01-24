@@ -5,13 +5,13 @@
     </div>
     <div class="row">
     	<div class="col-md-12">
-			<table class="table">
+			<table id="amdins-table" class="table">
 				<thead>
 					<tr>
 						<th>#</th>
 						<th>用户名</th>
 						<th>邮箱</th>
-						<th>手机号</th>						
+						<th>手机号</th>
 						<th>操作</th>
 					</tr>
 				</thead>
@@ -27,7 +27,14 @@
 					@endforeach
 				</tbody>
 			</table>
-			{!! $admins->render() !!}
     	</div>
     </div>
+@endsection
+
+@section('script')
+<script>
+	$('#admins-table').dataTable({
+		language: datatables_chs
+	})
+</script>
 @endsection
