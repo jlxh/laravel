@@ -11,6 +11,10 @@ mix.disableNotifications();
  |
  */
 
+mix.autoload({
+   jquery: ['$', 'jQuery']
+});
+
 mix.js('resources/assets/user/js/app.js', 'public/js')
 	.sass('resources/assets/user/sass/app.scss', 'public/css');
 
