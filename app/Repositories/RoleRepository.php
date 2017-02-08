@@ -5,6 +5,9 @@ use App\Models\Role;
 
 class RoleRepository
 {
+
+	public $model = Role::class;
+
 	/**
 	 * Get all roles.
 	 * 
