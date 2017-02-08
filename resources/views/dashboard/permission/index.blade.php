@@ -11,7 +11,6 @@
 						<th>#</th>
 						<th>名称</th>
 						<th>描述</th>
-						<th>操作</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -20,7 +19,6 @@
 							<td>{{ $permission->id }}</td>
 							<td>{{ $permission->display_name }}</td>
 							<td>{{ $permission->description }}</td>
-							<td><a class="btn btn-info" href="{{ url('dashboard/permissions/'.$permission->id) }}">详情</a></td>
 						</tr>
 					@endforeach
 				</tbody>
