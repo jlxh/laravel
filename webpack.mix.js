@@ -1,4 +1,4 @@
-let mix = require('@forehalo/laravel-mix').mix;
+let { mix } = require('laravel-mix');
 mix.disableNotifications();
 /*
  |--------------------------------------------------------------------------
@@ -18,4 +18,4 @@ mix.js('resources/assets/dashboard/js/dashboard.js', 'public/js')
 	.sass('resources/assets/dashboard/sass/dashboard.scss', 'public/css');
 
 mix.sourceMaps();
-mix.version();
+// mix.version();
