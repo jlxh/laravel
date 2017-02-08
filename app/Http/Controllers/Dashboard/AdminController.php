@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Repositories\AdminRepository;
 
 class AdminController extends Controller
 {
-
 	/**
 	 * AdminRepository Instence.
+	 * 
 	 * @var AdminRepository
 	 */
 	protected $admin;
 
 	/**
 	 * AdminController constructor
+	 * 
 	 * @param AdminRepository $admin
 	 */
 	public function __construct(AdminRepository $admin)

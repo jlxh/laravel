@@ -2,24 +2,28 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
+use Gate;
 
 class DashboardController extends Controller
 {
     /**
+     * Dashboard index.
+     * 
      * @param int $id
      * @return \Illuminate\View\View
      */
-    public function index($id = 0)
+    public function index()
     {
         if (! session()->has('adminTemplate')) {
             session(['adminTemplate' => 'gentallela']);
         }
 
-        return view('dashboard.index', ['id' => $id]);
+        return $this->view('dashboard.index');
     }
 
     /**
+     * Select template.
+     * 
      * @param $version
      * @return \Illuminate\Http\RedirectResponse
      */
