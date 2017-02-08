@@ -30,7 +30,7 @@ class Role extends Model
      */
     public function admins()
     {
-        return $this->belongsToMany('App\Models\Admin', 'user_roles');
+        return $this->belongsToMany('App\Models\Admin', 'admin_roles');
     }
 
     /**

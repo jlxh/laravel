@@ -41,6 +41,6 @@ class Admin extends Model implements
 
     public function roles()
     {
-        return $this->belongsToMany('App\Models\Role', 'user_roles');
+        return $this->belongsToMany('App\Models\Role', 'admin_roles');
     }
 }
