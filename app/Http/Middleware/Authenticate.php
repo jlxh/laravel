@@ -42,6 +42,21 @@ class Authenticate
             }
         }
 
+        $this->fetchAuthenticatedUserPermissions();
+
         return $next($request);
+    }
+
+    protected function fetchAuthenticatedUserPermissions()
+    {
+        $admin = $this->auth->user();
+
+        $roles = $admin->roles()->with('permissions')->get();
+
+        $permissions = $roles->reduce(function ($result, $role) {
+            return array_merge($result, $role->permissions->pluck('name')->toArray());
+        }, []);
+
+        session(['permissions' => $permissions]);
     }
 }
