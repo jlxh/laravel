@@ -19,7 +19,6 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard'], function () 
         Route::get('/logout', 'Auth\AuthController@getLogout');
         Route::get('/', 'DashboardController@index');
         Route::get('/template/{version}', 'DashboardController@selectTemplate');
-        Route::get('/example/{id}', 'DashboardController@index');
 
         // Admins management
         Route::resource('admins', 'AdminController');
