@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use Gate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\RoleRepository;
@@ -23,6 +24,8 @@ class RoleController extends Controller
      */
     public function index()
     {
+        if (Gate::denies('show', $role->model)) abort(403);
+
         $roles = $this->role->all();
         return view('dashboard.role.index', compact('role'));
     }

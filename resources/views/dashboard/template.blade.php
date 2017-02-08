@@ -14,44 +14,22 @@
 </head>
 
 <!-- template body -->
-@include('dashboard.templates.'.session('adminTemplate').'.body', [
-                'navlinks' => [
-                    // 首页
-                    ['name' => '首页', 'links' => url('dashboard'), 'icon' => 'fa-home'],
-                    [
-                        'name' => '权限管理', 'icon' => 'fa-lock',
-                        'links' => [
-                            ['name' => '管理员管理', 'links' => url('dashboard/admins')],
-                            ['name' => '角色管理', 'links' => url('dashboard/roles')],
-                            ['name' => '权限管理', 'links' => url('dashboard/permissions')],
-                        ]
-                    ],
-
-                    // 样例
-                    [
-                        'name' => '导航菜单',
-                        'links' => [
-                            ['name' => '子菜单1', 'links' => url('dashboard/example/1')],
-                            ['name' => '子菜单2', 'links' => url('dashboard/example/2')]
-                        ],
-                        'icon' => 'fa-key'
-                    ]
-                ],
-
-                'toplinks' => [
-                    // 选择模板
-                    [
-                        'name' => '选择模板',
-                        'links' => [
-                            ['name' => 'Gentenllela', 'links' => url('dashboard/template/gentallela')],
-                            ['name' => 'AdminLTE', 'links' => url('dashboard/template/adminlte')]
-                        ]
-                    ],
-
-                    // 退出
-                    ['name' => 'logout', 'links' => url('dashboard/logout')]
-                ]
+@include('dashboard.templates.'.session('adminTemplate').'.body',
+[
+    'navlinks' => $navlinks,
+    'toplinks' => [
+        // 选择模板
+        [
+            'name' => '选择模板',
+            'links' => [
+                ['name' => 'Gentenllela', 'links' => url('dashboard/template/gentallela')],
+                ['name' => 'AdminLTE', 'links' => url('dashboard/template/adminlte')]
             ]
-        )
+        ],
+
+        // 退出
+        ['name' => 'logout', 'links' => url('dashboard/logout')]
+    ]
+])
 
 </html>

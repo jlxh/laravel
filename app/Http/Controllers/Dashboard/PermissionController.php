@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Repositories\PermissionRepository;
 
 class PermissionController extends Controller
@@ -23,7 +22,8 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = $this->permission->all();
-        return view('dashboard.permission.index', compact('permissions'));
+
+        return $this->view('dashboard.permission.index', compact('permissions'));
     }
 
     /**
