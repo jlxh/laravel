@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>管理员登陆</title>
+    <title>管理员登录</title>
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ asset('admin-assets/gentallela/css/custom.min.css') }}">
@@ -22,7 +22,7 @@
             <section class="login_content">
                 <form action="{{ url('dashboard/login') }}" method="post">
                     {!! csrf_field() !!}
-                    <h1>登陆</h1>
+                    <h1>登录</h1>
                     <div>
                         <input type="email" class="form-control" placeholder="邮箱" required="" name="email"/>
                     </div>
@@ -36,7 +36,7 @@
                         </label>
                     </div>
                     <div>
-                        <button class="btn btn-default submit" type="submit">登陆</button>
+                        <button class="btn btn-default submit" type="submit">登录</button>
                     </div>
 
                     <div class="clearfix"></div>
