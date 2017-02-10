@@ -26,6 +26,7 @@ class LoginTest extends TestCase
             ->type('123456', 'password')
             ->check('remember')
             ->press('登录')
+            ->see('后台管理系统')
             ->seePageIs('/dashboard');
     }
 
