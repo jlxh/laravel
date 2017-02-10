@@ -4,6 +4,11 @@
     	<h2>管理员管理</h2>
     </div>
     <div class="row">
+        <div class="col-md-12">
+            <a href="{{ url('/dashboard/admins/create') }}" class="btn btn-primary">添加管理员</a>
+        </div>
+    </div>
+    <div class="row">
     	<div class="col-md-12">
 			<table id="amdins-table" class="table">
 				<thead>
@@ -27,14 +32,15 @@
 					@endforeach
 				</tbody>
 			</table>
+            {!! $admins->render() !!}
     	</div>
     </div>
 @endsection
 
 @section('script')
 <script>
-	$('#admins-table').dataTable({
-		language: datatables_chs
-	})
+	// $('#admins-table').dataTable({
+	// 	language: datatables_chs
+	// })
 </script>
 @endsection

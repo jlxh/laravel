@@ -9,12 +9,12 @@
     <title>后台管理</title>
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ mix('css/dashboard.css') }}">
-    @include('dashboard.templates.'.session('adminTemplate').'.css')
+    @include('dashboard.templates.'.session('adminTemplate', 'gentallela').'.css')
     @yield('css')
 </head>
 
 <!-- template body -->
-@include('dashboard.templates.'.session('adminTemplate').'.body',
+@include('dashboard.templates.'.session('adminTemplate', 'gentallela').'.body',
 [
     'navlinks' => $navlinks,
     'toplinks' => [

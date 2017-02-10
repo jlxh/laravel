@@ -1,10 +1,10 @@
 <body class="skin-blue sidebar-mini fixed">
     <div class="wrapper">
         <!-- Top navigation -->
-        @include('dashboard.templates.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
+        @include('dashboard.templates.adminlte.topbar', ['links' => $toplinks])
 
         <!-- Sidebar menu -->
-        @include('dashboard.templates.'.session('adminTemplate').'.navbar', ['links' => $navlinks])
+        @include('dashboard.templates.adminlte.navbar', ['links' => $navlinks])
 
         <div class="content-wrapper">
             <section class="content">

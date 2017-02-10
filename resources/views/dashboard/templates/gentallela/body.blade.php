@@ -2,10 +2,10 @@
     <div class="container body">
         <div class="main_container">
             <!-- Sidebar menu -->
-            @include('dashboard.templates.'.session('adminTemplate').'.navbar', ['links' => $navlinks])
+            @include('dashboard.templates.gentallela.navbar', ['links' => $navlinks])
 
             <!-- Top navigation -->
-            @include('dashboard.templates.'.session('adminTemplate').'.topbar', ['links' => $toplinks])
+            @include('dashboard.templates.gentallela.topbar', ['links' => $toplinks])
 
             <div class="right_col" role="main">
                 <!-- Page content -->
